@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+<body>
+<script>
+    // 严格模式下，声明变量必须要用var
+    'use strict';
+
+    // \来处理Unicode中文字符
+    document.write('\u4e2d\u6587');
+
+    // ES6支持使用``来包裹多行字符，如果浏览器不支持ES6则需要用\n手动处理
+    console.log(`
+    world
+    is
+    beautiful`);
+
+    // ES6支持模板字符串，如果不支持ES6则需要使用拼接的方式
+    let name = 'break';
+    let age = 25;
+    let message = `你好，${name}, 你今年${age}岁了`;
+    console.log(message);
+
+    // 字符串是不可变的，如果对字符串的某个索引赋值，strict模式下会报错，非strict下无任何变化
+    let string = 'breakDinner';
+    console.log(string[5]);
+    // string[5] = 'd';
+    // console.log(string[5]);
+
+    // 大小写转换
+    let string1 = 'Hello';
+    console.log(string1.toUpperCase());
+    string1 = 'Hello';
+    console.log(string1.toLowerCase());
+
+    // 查找位置
+    console.log(string1.indexOf('lo'));
+
+    // 截取
+    console.log(string1.substring(0, 3));
+</script>
+</body>
+</html>
